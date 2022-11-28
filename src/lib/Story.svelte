@@ -15,6 +15,7 @@
 
     document.addEventListener("DOMContentLoaded", () => {
         let storiesArray = document.querySelectorAll(".stories");
+        let colorsArray = document.querySelectorAll(".color");
 
         storiesArray.forEach((item) => {
             item.addEventListener("click", (event) => {
@@ -25,6 +26,8 @@
                 click.style.visibility = "visible";
             });
         });
+
+        
     });
 
     function createStory() {
@@ -86,7 +89,7 @@
     function colorc6() {
         let ttbox = document.querySelector(".titleBox");
         // @ts-ignore
-        let ttcontent = document.querySelector(".content").style;
+        let ttcontent = document.querySelector(".content");
         // @ts-ignore
         ttbox.style.background = "#343a40";
         ttcontent.style.boxShadow = `inset 20px 20px 60px #2c3136,
@@ -99,11 +102,11 @@
         <!-- svelte-ignore a11y-click-events-have-key-events -->
         <div class="create" on:click={createStory}>+</div>
         <div class="child">
-            <div class="stories" data-value={IMG1}>1</div>
-            <div class="stories" data-value={IMG2}>2</div>
-            <div class="stories" data-value={IMG3}>3</div>
-            <div class="stories" data-value={IMG4}>4</div>
-            <div class="stories" data-value={IMG5}>5</div>
+            <div class="stories" data-value={IMG1}></div>
+            <div class="stories" data-value={IMG2}></div>
+            <div class="stories" data-value={IMG3}></div>
+            <div class="stories" data-value={IMG4}></div>
+            <div class="stories" data-value={IMG5}></div>
         </div>
     </div>
 </div>
@@ -130,12 +133,12 @@
                     bind:value={cmessage}
                 />
                 <div class="colors">
-                    <button class="color1" on:click={colorc1} />
-                    <button class="color2" on:click={colorc2} />
-                    <button class="color3" on:click={colorc3} />
-                    <button class="color4" on:click={colorc4} />
-                    <button class="color5" on:click={colorc5} />
-                    <button class="color6" on:click={colorc6} />
+                    <button class="color" on:click={colorc1} />
+                    <button class="color" on:click={colorc2} />
+                    <button class="color" on:click={colorc3} />
+                    <button class="color" on:click={colorc4} />
+                    <button class="color" on:click={colorc5} />
+                    <button class="color" on:click={colorc6} />
                 </div>
             </div>
             <div class="preview">
