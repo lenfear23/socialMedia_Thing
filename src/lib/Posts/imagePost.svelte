@@ -50,6 +50,7 @@
     height: 70px;
     border-radius: 10px;
     border: 2px solid #0CCE6B;
+    box-shadow: 20px 20px 20px 20px rgba(0,0,0,0.15);
 }
 .profilepicture:nth-child(1){
     background-image: url(../../assets/imgs/asd19.jpg);
@@ -65,20 +66,22 @@
 .postinfo{
     display: flex;
     align-items: center;
-    padding: 10px 10px;
+    padding: 20px 20px;
     border-radius: 10px;
+    background-color: #1f1f1f94;
     transition: all .5s;
     width: 300px;
 }
 .postinfo:hover{
     cursor: pointer;
-    background-color: rgba(110, 109, 109, 0.178);
-    transform: scale(1.1);
+    background-color: #1f1f1f94;
+    transform: scale(1.05);
 }
 
 .profilename{
     margin-left: 20px;
-    color: #EF2D56;
+    color: #fdfdfd;
+    font-size: 20px;
 }
 
 .postlikes{
@@ -86,7 +89,7 @@
     height: 80px;
     margin-top: 450px;
     margin-left: 620px;
-    background-color: transparent;
+    background-color: #1f1f1f94;
     border-radius: 10px;
     transition: all .5s;
     display: flex;
@@ -96,24 +99,34 @@
 }
 .postlikes:hover{
     cursor: pointer;
-    background-color: rgba(110, 109, 109, 0.178);
+    background-color: #1f1f1f94;
     transform: scale(1.1);
 }
-@media (max-width:420px){
+@media (max-width:600px){
     .postlikes{
         transform: scale(0.8);
         margin-top: 530px;
+        margin-left: 220px;
+    }
+}
+@media (max-width:420px){
+    .postlikes{
+        transform: scale(0.7);
+        height: 70px;
+        margin-top: 530px;
+        margin-left: 220px;
     }
     .postlikes:hover{
-        transform: scale(0.85);
+        transform: scale(0.75);
     }
     .postinfo{
-        transform: scale(0.7);
-        padding: 0 0;
-        margin-left: -30px;
+        max-width: 300px;
+        transform: scale(0.6);
+        padding: 10px 10px;
+        margin-left: -40px;
     }
     .postinfo:hover{
-        transform: scale(0.75);
+        transform: scale(0.65);
     }
     .postbox{
         padding: 10px 0;

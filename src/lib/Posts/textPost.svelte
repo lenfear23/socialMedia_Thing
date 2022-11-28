@@ -35,10 +35,10 @@
     box-shadow: 20px 20px 20px 20px rgba(0,0,0,0.2);
 }
 .titleprofile{
-    max-width: 300px;
+    max-width: 250px;
     min-width: 200px;
     height: 60px;
-    background-color: rgba(128, 128, 128, 0.075);
+    background-color: rgba(71, 71, 71, 0.308);
     padding: 10px 10px;
     border-radius: 10px;
     display: flex;
@@ -53,6 +53,7 @@
 .titleprofilepicture{
     min-width: 50px;
     min-height: 50px;
+    margin-left: 10px;
     border-radius: 5px;
     background-image: url("../../assets/imgs/asd9.jpg");
     background-repeat: no-repeat;
@@ -145,18 +146,21 @@
 @media (max-width:420px){
     
     .titleprofile{
-        min-width: 100px;
-        transform: scale(0.8);
-        margin-right: 250px;
+        transform: scale(0.7);
+        margin-left: -40px;
         padding: 0 0;
+    }
+    .titleprofile:hover{
+        transform: scale(0.8);
     }
     
    .actions{
     margin-left: 200px;
     margin-top: -160px;
+    transform: scale(0.9);
    }
 }
-@media (min-width:860px){
+@media (max-width:860px){
     .actions{
     margin-left: 200px;
     margin-top: -160px;
