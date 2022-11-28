@@ -208,10 +208,12 @@
     margin-left:410px;
     position: fixed;
     padding: 20px 20px;
-    background-color: white;
+    background-color: rgba(252, 252, 252, 0.692);
+    
     box-shadow: 20px 20px 20px 20px rgba(0,0,0,0.15);
     border-radius: 10px;
     overflow-x: scroll;
+    
     overflow-y: hidden;
     z-index: 99;
 }
