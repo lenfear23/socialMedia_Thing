@@ -62,15 +62,19 @@
     padding: 10px 10px;
     border-radius: 10px;
     transition: all .5s;
+    background-color: rgba(80, 80, 80, 0.479);
+    padding: 10px 10px;
+    backdrop-filter: blur( 5px );
     width: 300px;
 }
 .postinfo:hover{
     cursor: pointer;
-    background-color: rgba(110, 109, 109, 0.178);
+    background-color: rgba(80, 80, 80, 0.479);
     transform: scale(1.1);
 }
 
 .profilename{
+    font-size: 20px;
     margin-left: 20px;
     color: #EF2D56;
 }
@@ -104,7 +108,7 @@
     }
     .postinfo{
         transform: scale(0.7);
-        padding: 0 0;
+        padding: 10px 10px;
         margin-left: -30px;
     }
     .postinfo:hover{

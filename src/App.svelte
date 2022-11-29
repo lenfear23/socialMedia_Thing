@@ -11,7 +11,9 @@
  <Story/>
  <Posts />
  <div class="nav">
-
+  <h4>Home</h4>
+  <h4>Messages</h4>
+  <h4>Search</h4>
  </div>
 </main>
 
@@ -26,7 +28,9 @@
     border-top-right-radius: 10px;
     background-color: rgba(22, 22, 22, 0.473);
     backdrop-filter: blur( 5.5px );
-
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     visibility: hidden;
   }
   @media (max-width:1800px){

@@ -38,7 +38,7 @@
     max-width: 300px;
     min-width: 200px;
     height: 60px;
-    background-color: rgba(128, 128, 128, 0.075);
+    background-color: rgba(80, 80, 80, 0.479);;
     padding: 10px 10px;
     border-radius: 10px;
     display: flex;
@@ -145,10 +145,13 @@
 @media (max-width:420px){
     
     .titleprofile{
-        min-width: 100px;
+        width: 200px;
         transform: scale(0.8);
-        margin-right: 250px;
-        padding: 0 0;
+        margin-left: -20px;
+        padding: 0 5px;
+    }
+    .titleprofile:hover{
+        transform: scale(0.85);
     }
     
    .actions{
