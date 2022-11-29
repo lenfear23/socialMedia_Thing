@@ -4,8 +4,9 @@
     import IMG3 from './img/2.jpg';
     import IMG4 from './img/8.jpg';
     import IMG5 from './img/storyvid.mp4';
-
+    import color from './Story/colorChange.svelte'
     import Posts from './Posts.svelte';
+  import ColorChange from './Story/colorChange.svelte';
     
   
     function close(){
@@ -15,44 +16,22 @@
         
     }
     
+    document.addEventListener("DOMContentLoaded",()=>{
+    let imgsrcArray = document.querySelectorAll(".stories");
+    console.log(imgsrcArray.length)
 
-    function story1(){
-      // @ts-ignore
-        document.querySelector(".imgsrc").src = `${IMG1}`;
+    imgsrcArray.forEach(item =>{
+        item.addEventListener("click",(event)=>{
+            
+            // @ts-ignore
+        document.querySelector(".imgsrc").src = event.target.getAttribute("data-imgsrc");
         
         let click = document.querySelector(".storiesPlay");
         // @ts-ignore
         click.style.visibility = "visible" ;
-    }
-    function story2(){
-        // @ts-ignore
-        document.querySelector(".imgsrc").src = `${IMG2}`;
-        let click = document.querySelector(".storiesPlay");
-        // @ts-ignore
-        click.style.visibility = "visible" ;
-    }
-    function story3(){
-        // @ts-ignore
-        document.querySelector(".imgsrc").src = `${IMG3}`;
-        let click = document.querySelector(".storiesPlay");
-        // @ts-ignore
-        click.style.visibility = "visible" ;
-    }
-    function story4(){
-        // @ts-ignore
-        document.querySelector(".imgsrc").src = `${IMG4}`;
-        let click = document.querySelector(".storiesPlay");
-        // @ts-ignore
-        click.style.visibility = "visible" ;
-    }
-    function story5(){
-        // @ts-ignore
-        document.querySelector(".imgsrc").src = `${IMG1} `;
-        let click = document.querySelector(".storiesPlay");
-        // @ts-ignore
-        click.style.visibility = "visible" ;
-    }
-
+        })
+    })
+})
     function createStory(){
         let creates = document.querySelector('.createCard');
         // @ts-ignore
@@ -63,60 +42,6 @@
         let creates = document.querySelector('.createCard');
         // @ts-ignore
         creates.style.visibility="collapse";
-    }
-    function colorc1(){
-        let ttbox = document.querySelector(".titleBox");
-        let ttcontent = document.querySelector(".content");
-        // @ts-ignore
-        ttbox.style.background="#0c97ce";
-        // @ts-ignore
-        ttcontent.style.boxShadow=`inset 10px 10px 50px #0a80af,
-            inset -10px -10px 50px #0eaeed`;
-    }
-    function colorc2(){
-        let ttbox = document.querySelector(".titleBox");
-        let ttcontent = document.querySelector(".content");
-        // @ts-ignore
-        ttbox.style.background="#383F51";
-        // @ts-ignore
-        ttcontent.style.boxShadow=`inset 20px 20px 60px #2b313e,
-            inset -20px -20px 60px #454d64`;
-    }
-    function colorc3(){
-        let ttbox = document.querySelector(".titleBox");
-        let ttcontent = document.querySelector(".content");
-        // @ts-ignore
-        ttbox.style.background="#D84A05";
-        // @ts-ignore
-        ttcontent.style.boxShadow=`inset 20px 20px 60px #842d03,
-            inset -20px -20px 60px #ff6707`;
-    }
-    function colorc4(){
-        let ttbox = document.querySelector(".titleBox");
-        let ttcontent = document.querySelector(".content");
-        // @ts-ignore
-        ttbox.style.background="#70A37F";
-        // @ts-ignore
-        ttcontent.style.boxShadow=`inset 20px 20px 60px #567e62,
-            inset -20px -20px 60px #8ac89c`;
-    }
-    function colorc5(){
-        let ttbox = document.querySelector(".titleBox");
-        let ttcontent = document.querySelector(".content");
-        // @ts-ignore
-        ttbox.style.background="#4C3957";
-        // @ts-ignore
-        ttcontent.style.boxShadow=`inset 20px 20px 60px #3b2c43,
-            inset -20px -20px 60px #5d466b`;
-    }
-    function colorc6(){
-        let ttbox = document.querySelector(".titleBox");
-        // @ts-ignore
-        let ttcontent = document.querySelector(".content").style;
-        // @ts-ignore
-        ttbox.style.background="#343a40";
-        ttcontent.style.boxShadow=`inset 20px 20px 60px #2c3136,
-            inset -20px -20px 60px #3c434a`;
     }
 </script>
 
@@ -129,15 +54,15 @@
     </div>
 <div class="child">
     <!-- svelte-ignore a11y-click-events-have-key-events -->
-    <div class="stories" on:click={story1}></div>
+    <div class="stories" data-imgsrc={IMG1}></div>
     <!-- svelte-ignore a11y-click-events-have-key-events -->
-    <div class="stories" on:click={story2}></div>
+    <div class="stories" data-imgsrc={IMG2}></div>
     <!-- svelte-ignore a11y-click-events-have-key-events -->
-    <div class="stories" on:click={story3}></div>
+    <div class="stories" data-imgsrc={IMG3}></div>
     <!-- svelte-ignore a11y-click-events-have-key-events -->
-    <div class="stories" on:click={story4}></div>
+    <div class="stories" data-imgsrc={IMG4}></div>
     <!-- svelte-ignore a11y-click-events-have-key-events -->
-    <div class="stories" on:click={story5}></div>
+    <div class="stories" data-imgsrc={IMG1}></div>
 </div>
 </div>
 </div>
@@ -160,14 +85,8 @@
                 <div class="img">Image</div>
             </div>
             <div class="inputs">
-                <input type="text" placeholder="Message.." bind:value={cmessage}>
                 <div class="colors">
-                    <button class="color1" on:click={colorc1}></button>
-                    <button class="color2" on:click={colorc2}></button>
-                    <button class="color3" on:click={colorc3}></button>
-                    <button class="color4" on:click={colorc4}></button>
-                    <button class="color5" on:click={colorc5}></button>
-                    <button class="color6" on:click={colorc6}></button>
+                    <ColorChange/>
                 </div>
             </div>
             <div class="preview">
@@ -176,7 +95,7 @@
                         <div class="titleprofilepicture"></div>
                         <div class="titleprofilename">Kyd</div>
                     </div>
-                    <div class="content">{cmessage}</div>
+                    <div class="content" contenteditable="true" bind:innerHTML={cmessage}>Ide írj</div>
                     
                 </div>
             </div>
@@ -424,34 +343,7 @@ input{
 .colors{
     margin-top: 50px;
 }
-.colors button{
-    width: 35px;
-    height: 35px;
-    outline: none;
-    border: none;
-    border-radius: 5px;
-}
-.colors button:hover{
-    cursor: pointer;
-}
-.color1{
-    background-color: #0c97ce;
-}
-.color2{
-    background-color: #383F51;
-}
-.color3{
-    background-color: #D84A05;
-}
-.color4{
-    background-color: #70A37F;
-}
-.color5{
-    background-color: #4C3957;
-}
-.color6{
-    background-color: #343a40;
-}
+
 .preview{
     width: 100%;
     min-height: 200px;

@@ -4,7 +4,8 @@
 import Test from "../assets/Datas/posts.json";
     import TextPost from "../lib/Posts/textPost.svelte";
     import ImagePost from "./Posts/imagePost.svelte";
-   import img1 from "./img/1.jpg";
+   import img1 from "./img/asd10.jpg";
+   import img2 from "./img/asd12.jpg";
 
 
     
@@ -14,7 +15,7 @@ import Test from "../assets/Datas/posts.json";
 
         <TextPost profilename={"Lenfear23"} content={"Lorem ipsum dolor"} likes={"1000"}/>
         <ImagePost profilename={"Lenfear23"} likes={"106"} imgsrc={img1}/>
-        <ImagePost profilename={"Lenfear23"} likes={"5670"} imgsrc={img1}/>
+        <ImagePost profilename={"Lenfear23"} likes={"5670"} imgsrc={img2}/>
         <TextPost profilename={"Lenfear23"} content={"Lorem ipsum dolor"} likes={"0"}/>
         <TextPost profilename={"Lenfear23"} content={"Lorem ipsum dolor"} likes={"9999"}/>
 
@@ -48,8 +49,6 @@ import Test from "../assets/Datas/posts.json";
   border-radius: 20px;
   max-height: 200px;
 }
-
-
 
 
 

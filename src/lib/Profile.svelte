@@ -263,6 +263,9 @@ document.addEventListener('DOMContentLoaded',()=>{
     z-index: 99;
 }
 
+.imgBox:hover ~ .imgBox{
+    filter: blur(3px);
+}
 
 @media (max-width:1500px){
     .container{

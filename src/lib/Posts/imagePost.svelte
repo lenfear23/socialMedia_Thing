@@ -3,11 +3,6 @@
     export let likes;
     export let imgsrc;
 
-    console.log(imgsrc)
-    
-    
-    
-
     function likeAdding(){
         likes++;
     }
@@ -15,7 +10,7 @@
 
 </script>
 
-<div class="postbox" on:dblclick={likeAdding}>
+<div class="postbox" style="{ `background-image: url(${imgsrc})!important;` }" on:dblclick={likeAdding}>
     
     <div class="postinfo">
         <div class="profilepicture"></div>
@@ -40,9 +35,8 @@
     margin-top:30px;
     border-radius: 10px;
     box-shadow: 20px 20px 20px 20px rgba(0,0,0,0.15);
-    background: rgb(251,8,0);
-    background: linear-gradient(142deg, rgba(251,8,0,1) 0%, rgba(255,111,0,0.989233193277311) 100%);
     background-position: center;
+    background-size:auto;
 }
 
 .profilepicture{
@@ -103,6 +97,7 @@
     .postlikes{
         transform: scale(0.8);
         margin-top: 530px;
+        margin-left: 220px;
     }
     .postlikes:hover{
         transform: scale(0.85);
