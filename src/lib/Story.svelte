@@ -127,7 +127,9 @@
     margin-left:410px;
     position: fixed;
     padding: 20px 20px;
-    background-color: white;
+    background-color: rgba(22, 22, 22, 0.473);
+    backdrop-filter: blur( 10.5px );
+    -webkit-backdrop-filter: blur(10.5px);
     box-shadow: 20px 20px 20px 20px rgba(0,0,0,0.15);
     border-radius: 10px;
     overflow-x: scroll;
@@ -157,7 +159,7 @@
     text-align: center;
     align-items: center;
     justify-content: center;
-    color: black;
+    color: white;
     font-size: 20px;
     font-family: monospace;
     margin-right: 30px;
